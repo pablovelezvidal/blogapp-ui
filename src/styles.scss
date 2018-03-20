@@ -1,0 +1,32 @@
+@import "~@angular/material/theming";
+@import './sass/variables';
+@import './sass/mixins';
+@include mat-core();
+
+$blog-app-primary: mat-palette($mat-green);
+$blog-app-accent: mat-palette($mat-cyan);
+$blog-app-theme: mat-light-theme($blog-app-primary, $blog-app-accent);
+
+@include angular-material-theme($blog-app-theme);
+
+html, body, .mat-sidenav-container {
+    height: 100vh;
+}
+
+body{
+    margin: 0px;
+    background: #efefef;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.filler {
+    visibility: hidden;
+    flex-grow: 1;
+}
+
+.mat-card{
+    border-left: 15px solid mat-color($mat-indigo, 400);
+}
